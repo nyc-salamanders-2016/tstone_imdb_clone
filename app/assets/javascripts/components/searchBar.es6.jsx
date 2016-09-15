@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
     event.preventDefault();
     let title = this.refs.search.value
     $.ajax({
-      url: `http://www.omdbapi.com/?s=${title}&plot=short&r=json`,
+      url: `http://www.omdbapi.com/?s=${title}&type=movie&r=json`,
       method: 'get'
     })
     .done((response) => {
@@ -25,7 +25,7 @@ class SearchBar extends React.Component {
     if (this.state.itemInfo.length > 0) {
       debugger
       return (
-        <ul>
+        <ul id="movie-list">
           {
             this.state.itemInfo[0].Search.map((movie, i) => {
               return (<MovieView key={i} data={movie} />)
@@ -42,13 +42,13 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div>
-      <div id="nav-bar">
-        <h2>IMDB Clone!?</h2>
-        <form onSubmit={this.handleSubmit} id="search-bar" action="/find">
-          <input ref="search" type="text" placeholder="Find Movies, TV shows, Celebrities, and more..." />
-          <button type="submit">Search</button>
-        </form>
-      </div>
+        <div id="nav-bar">
+          <h2>IMDB Clone!?</h2>
+          <form onSubmit={this.handleSubmit} id="search-bar" action="/find">
+            <input ref="search" type="text" placeholder="Find Movies, TV shows, Celebrities, and more..." />
+            <button type="submit">Search</button>
+          </form>
+        </div>
       {this.searchedItemView()}
       </div>
     )
