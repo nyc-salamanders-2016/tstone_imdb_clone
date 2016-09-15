@@ -21,10 +21,23 @@ body {
   /*border: 1px solid;*/
 }
 
+ul {
+  list-style-type: none;
+}
+
+#nav-bar {
+}
+
+#nav-bar h2 {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
 #search-bar {
   width: 50%;
   float: right;
-  border: 1px solid;
+  /*border: 1px solid;*/
 }
 
 #search-bar input {
