@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  /*border: 1px solid;*/
+}
+
+#search-bar {
+  width: 50%;
+  float: right;
+  border: 1px solid;
+}
+
+#search-bar input {
+  width: 70%;
+  /*float: right;*/
+  height: 30px;
+  margin-right: 2px;
+  padding: 0;
+}
+
+#search-bar button {
+  width: 25%;
+  /*float: right;*/
+  height: 35px;
+  padding: 0;
+}
